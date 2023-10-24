@@ -12,6 +12,10 @@ import {
 } from '@chakra-ui/react'
 import { FaInstagram, FaFacebookF,FaGithub,FaYoutube,FaExternalLinkAlt } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
+import { Link as ReactRouterLink} from 'react-router-dom'
+import { Link as ChakraLink,LinkProps} from '@chakra-ui/react';
+import { SocialButton } from '../pages/components/SocialButton';
+import SocialStack from '../pages/components/SocialStack';
 
 const Logo = (props) => {
   return (
@@ -28,32 +32,7 @@ const Logo = (props) => {
   )
 }
 
-const SocialButton = ({
-  children,
-  label,
-  href,
-}) => {
-  return (
-    <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-      rounded={'full'}
-      w={8}
-      h={8}
-      cursor={'pointer'}
-      as={'a'}
-      href={href}
-      display={'inline-flex'}
-      alignItems={'center'}
-      justifyContent={'center'}
-      transition={'background 0.3s ease'}
-      _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-      }}>
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
-  )
-}
+
 
 const ListHeader = ({ children }) => {
   return (
@@ -80,37 +59,22 @@ export default function LargeWithNewsletter() {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Projects</ListHeader>
-            <Box as="a" href={'https://uoarocketry.org/projects/solid-rockets'}>
+            <ChakraLink as={ReactRouterLink} to="/projects/solid-rockets">
                 Solid Rockets
-            </Box>
-            <Box as="a" href={'https://uoarocketry.org/projects'}>
+            </ChakraLink>
+            <ChakraLink as={ReactRouterLink} to="/projects">
               Hybrid Motor
-            </Box>
-            <Box as="a" href={'https://uoarocketry.org/projects'}>
+            </ChakraLink>
+            <ChakraLink as={ReactRouterLink} to="/projects">
               Flight Computer
-            </Box>
+            </ChakraLink>
           </Stack>
           
-          <Stack direction={'row'} spacing={6}>
-              <SocialButton label={'Facebook'} href={'https://www.facebook.com/RocketryUoA/'}>
-                <FaFacebookF />
-              </SocialButton>
-              <SocialButton label={'Instagram'} href={'https://www.instagram.com/uoarocketry/'}>
-                <FaInstagram />
-              </SocialButton>
-              <SocialButton label={'YouTube'} href={'#'}>
-                <FaYoutube />
-              </SocialButton>
-              <SocialButton label={'Github'} href={'https://github.com/AberdeenRSS'}>
-                <FaGithub />
-              </SocialButton>
-              <SocialButton label={'AUSA'} href={'https://www.ausa.org.uk/organisation/31027/'}>
-                <FaExternalLinkAlt />
-              </SocialButton>
-              
-            </Stack>
+          <SocialStack />
         </SimpleGrid>
       </Container>
     </Box>
   )
 }
+
+//<ChakraLink as={ReactRouterLink} to="/contact"></ChakraLink>

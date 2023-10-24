@@ -8,9 +8,9 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { ChakraProvider } from "@chakra-ui/react"
 import { extendTheme,ColorModeScript } from '@chakra-ui/react';
 import '@fontsource/space-grotesk'
-import Team from './pages/Team';
+
 import Projects from './pages/Projects';
-import GetInvolved from './pages/GetInvolved';
+
 import Contact from './pages/Contact';
 import Sponsors from './pages/Sponsors';
 import Launches from './pages/Launches';
@@ -44,8 +44,6 @@ root.render(
 
         <Route path="/projects/solid-rockets" element={<SolidRockets />} />
 
-
-        <Route path="/get-involved" element={<GetInvolved />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/launches" element={<Launches/>} />

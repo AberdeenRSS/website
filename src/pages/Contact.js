@@ -1,7 +1,12 @@
 import React from 'react'
 import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
-import { Card,Textarea, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, Box, CardHeader, Heading, Button } from '@chakra-ui/react'
+import { Card,Textarea, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, Box, CardHeader, Heading, Button, Link } from '@chakra-ui/react'
+
+import { FaFacebookF, FaInstagram, FaYoutube, FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { Stack } from '@chakra-ui/react'
+import { SocialButton } from './components/SocialButton'
+import SocialStack from './components/SocialStack'
 
 
 export default function Contact() {
@@ -27,34 +32,37 @@ export default function Contact() {
               Contact Us
             </Heading>
           </CardHeader>
-          <form action="https://formsubmit.co/alanjsfleming5@gmail.com" method="POST">
-        <FormControl isInvalid={isError} isRequired>
-          <FormLabel>Email</FormLabel>
-          <Input type='email' name="email" value={email} onChange={handleInputChange} />
-          {!isError ? (
-            <FormHelperText>
-              Enter your contact email
-            </FormHelperText>
-          ) : (
-            <FormErrorMessage>Email is required.</FormErrorMessage>
-          )}
-        </FormControl>
-        
-        <FormControl isInvalid={isError} isRequired mt="3">
-          <FormLabel>Message</FormLabel>
-          <Textarea type='text' name="message"/>
-          {!isError ? (
-            <FormHelperText>
-              Enter your message
-            </FormHelperText>
-          ) : (
-            <FormErrorMessage>Message is required.</FormErrorMessage>
-          )}
-        </FormControl>
-        <input type="hidden" name="_next" value="https://www.uoarocketry.org" />
-        <Button type="submit" colorScheme="pink" variant="solid" size="lg" mt="5" w="100%">Send</Button>
-        </form>
+          <SocialStack />
+
+          <form action="https://formsubmit.co/rocketry@ausa.org.uk" method="POST">
+            <FormControl isInvalid={isError} isRequired>
+              <FormLabel>Email</FormLabel>
+              <Input type='email' name="email" value={email} onChange={handleInputChange} />
+              {!isError ? (
+                <FormHelperText>
+                  Enter your contact email
+                </FormHelperText>
+              ) : (
+                <FormErrorMessage>Email is required.</FormErrorMessage>
+              )}
+            </FormControl>
+            
+            <FormControl isInvalid={isError} isRequired mt="3">
+              <FormLabel>Message</FormLabel>
+              <Textarea type='text' name="message"/>
+              {!isError ? (
+                <FormHelperText>
+                  Enter your message
+                </FormHelperText>
+              ) : (
+                <FormErrorMessage>Message is required.</FormErrorMessage>
+              )}
+            </FormControl>
+            <input type="hidden" name="_next" value="https://www.uoarocketry.org" />
+            <Button type="submit" colorScheme="pink" variant="solid" size="lg" mt="5" w="100%">Send</Button>
+          </form>
         </Card>
+        
         </Box>
       <Footer />
     </>

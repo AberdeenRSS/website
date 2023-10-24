@@ -5,6 +5,9 @@ import Footer from '../layouts/Footer';
 import { useColorMode, Text,Box,Stack } from '@chakra-ui/react';
 import { FaLocationArrow } from 'react-icons/fa';
 
+import {Link as ReactRouterLink} from 'react-router-dom'
+import { Link as ChakraLink,LinkProps} from '@chakra-ui/react';
+
 
 function HomePage() {
 
@@ -19,27 +22,13 @@ function HomePage() {
             <Heading as="h1" mx="auto" size="3xl">UOA Rocketry</Heading>
             <Box mx="auto"><Text>Aberdeen, Scotland</Text></Box>
             <ButtonGroup variant="outline" spacing="2" mt="10">
-              <a href="https://www.uoarocketry.org/contact"><Button colorScheme="pink" variant="solid" size={{base:"md", md:"lg"}}>Get Involved</Button></a>
+              <ChakraLink as={ReactRouterLink} to="/contact"><Button colorScheme="pink" variant="solid" size={{base:"md", md:"lg"}}>Get Involved</Button></ChakraLink>
               
-              <a  href="https://www.uoarocketry.com/projects"><Button colorScheme="pink" variant="solid" size={{base:"md", md:"lg"}}>Our Projects</Button></a>
+              <ChakraLink as={ReactRouterLink} to="/projects"><Button colorScheme="pink" variant="solid" size={{base:"md", md:"lg"}}>Our Projects</Button></ChakraLink>
             </ButtonGroup>
 
           </Box>
         </Stack>
-
-        <Stack h="100vh" display="flex" justfy="space-around" hidden>
-          <Box>
-            <Heading as="h1" mx="auto" size="xl">About us</Heading>
-            <Box mx="auto">
-              <br></br>
-              <Text>If you have landed on this page you are probably interested in engineering, programming or space.</Text>
-              <br></br>
-              <Text>Don't worry if you don't have any experience in this. We are happy for everyone to join and will help you get into the topic.</Text>
-            </Box>
-          </Box>
-        </Stack>
-
-
       </Container>
       <Footer />
     </>

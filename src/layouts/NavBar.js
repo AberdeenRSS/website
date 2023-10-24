@@ -20,6 +20,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons'
+import { Link as ReactRouterLink} from 'react-router-dom'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
@@ -126,8 +127,25 @@ const DesktopNav = () => {
   )
 }
 
-const DesktopSubNav = ({ label, href, subLabel }) => {
+const DesktopSubNav = ({ label, href, subLabel, to }) => {
   return (
+    <>
+    {(to) ? (
+      <Box as={ReactRouterLink} to={to} role={'group'} display={'block'} p={2} rounded={'md'} _hover='pink.50'>
+        <Stack direction={'row'} align={'center'}>
+          <Box>
+            <Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
+              {label}
+            </Text>
+            <Text fontSize={'sm'}>{subLabel}</Text>
+          </Box>
+          <Flex transition={'all .3s ease'} transform={'translateX(-10px)'} opacity={0} _groupHover={{ opacity: '100%', transform: 'translateX(0)' }} justify={'flex-end'} align={'center'} flex={1}>
+            <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+          </Flex>
+        </Stack>
+      </Box>
+
+    ):(
     <Box
       as="a"
       href={href}
@@ -135,7 +153,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      _hover='pink.50'>
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
@@ -157,7 +175,8 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
-    </Box>
+    </Box>)}
+    </>
   )
 }
 
@@ -171,21 +190,22 @@ const MobileNav = () => {
   )
 }
 
-const MobileNavItem = ({ label, children, href }) => {
+const MobileNavItem = ({ label, children, href,to }) => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
-      <Box
+      {(to) ? (
+        <Box
         py={2}
-        as="a"
-        href={href ?? '#'}
+        as={ReactRouterLink}
+        to={to}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
           textDecoration: 'none',
         }}>
-        <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
+          <Text fontWeight={600} color='gray.200'>
           {label}
         </Text>
         {children && (
@@ -197,7 +217,31 @@ const MobileNavItem = ({ label, children, href }) => {
             h={6}
           />
         )}
-      </Box>
+        </Box>
+      )
+      :
+      (<Box
+        py={2}
+        as="a"
+        href={href ?? '#'}
+        justifyContent="space-between"
+        alignItems="center"
+        _hover={{
+          textDecoration: 'none',
+        }}>
+        <Text fontWeight={600} color="gray.200">
+          {label}
+        </Text>
+        {children && (
+          <Icon
+            as={ChevronDownIcon}
+            transition={'all .25s ease-in-out'}
+            transform={isOpen ? 'rotate(180deg)' : ''}
+            w={6}
+            h={6}
+          />
+        )}
+      </Box>)}
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
         <Stack
@@ -208,10 +252,15 @@ const MobileNavItem = ({ label, children, href }) => {
           borderColor={useColorModeValue('gray.200', 'gray.700')}
           align={'start'}>
           {children &&
-            children.map((child) => (
+            children.map((child) => ((child?.to) ? (
+              <Box as={ReactRouterLink} key={child.label} py={2} to={child.to}>
+                {child.label}
+              </Box>
+            ) : (
               <Box as="a" key={child.label} py={2} href={child.href}>
                 {child.label}
               </Box>
+            )
             ))}
         </Stack>
       </Collapse>
@@ -225,43 +274,52 @@ const NAV_ITEMS = [
   {
     label: 'Projects',
     href: 'https://www.uoarocketry.org/projects',
+    to: '/projects',
     children: [
       {
         label: 'Solid Rockets',
         subLabel: 'See our solid rocket projects',
         href: 'https://www.uoarocketry.org/projects/solid-rockets',
+        to: '/projects/solid-rockets',
       },
       {
         label: 'Hybrid Motor',
         subLabel: 'Current development of a hybrid motor',
         href: 'https://www.uoarocketry.org/projects',
+        to: '/projects',
       },
       {
         label:'Flight Computer',
         subLabel:'Rocket telemetry and control',
         href:'https://www.uoarocketry.org/projects',
+        to:'/projects',
       }
     ],
   },
   {
     label: 'Launches',
     href: 'https://www.uoarocketry.org/launches',
+    to: '/launches',
     children: [
       {
         label: 'Launches',
         subLabel: 'View all of our past and upcoming launches',
         href: 'https://www.uoarocketry.org/launches',
+        to: '/launches',
       },
       {
         label: 'Data',
         subLabel: 'Data gathered from our launches',
-        href: '#',
+        href: 'https://app.uoarocketry.org',
+
       },
     ],
   },
   
-  { label:'Contact',
+  { 
+    label:'Contact',
     href:'https://www.uoarocketry.org/contact',
+    to:'/contact',
   }
 ]
 
