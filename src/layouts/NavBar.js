@@ -2,6 +2,7 @@ import {
   Box,
   Flex,
   Text,
+  Image,
   IconButton,
   Stack,
   Collapse,
@@ -21,6 +22,7 @@ import {
 } from '@chakra-ui/icons'
 import { Link as ReactRouterLink} from 'react-router-dom'
 import { Link as ChakraLink} from '@chakra-ui/react';
+import Logo from '../assets/images/RSSLogo.png'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
@@ -50,15 +52,11 @@ export default function WithSubnavigation() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <ChakraLink as={ReactRouterLink} to="/">
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            UOA Rocketry
-          </Text>
+          <Image src={Logo} alt="UOA Rocketry Logo" w="80px"/>
+          
           </ChakraLink>
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          <Flex display={{ base: 'none', md: 'flex' }} lineHeight="80px" ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
