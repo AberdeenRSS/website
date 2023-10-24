@@ -48,12 +48,14 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+          <a href="https://www.uoarocketry.org/">
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}>
             UOA Rocketry
           </Text>
+          </a>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
@@ -222,6 +224,7 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: 'Projects',
+    href: 'https://www.uoarocketry.org/projects',
     children: [
       {
         label: 'Solid Rockets',
@@ -242,6 +245,7 @@ const NAV_ITEMS = [
   },
   {
     label: 'Launches',
+    href: 'https://www.uoarocketry.org/launches',
     children: [
       {
         label: 'Launches',
