@@ -83,7 +83,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
 
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction={'row'} spacing={4} >
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -111,7 +111,7 @@ const DesktopNav = () => {
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}>
-                <Stack>
+                <Stack  lineHeight="25px">
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
@@ -131,7 +131,7 @@ const DesktopSubNav = ({ label, href, subLabel, to }) => {
     {(to) ? (
       <Box as={ReactRouterLink} to={to} role={'group'} display={'block'} p={2} rounded={'md'} _hover='pink.50'>
         <Stack direction={'row'} align={'center'}>
-          <Box>
+        <Box>
             <Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
               {label}
             </Text>
