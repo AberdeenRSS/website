@@ -31,10 +31,11 @@ export default function Projects() {
                 <Divider />
                 <CardFooter>
                   <ButtonGroup spacing='2'>
+                    <a href="https://uoarocketry.org/projects/solid-rockets">
                     <Button variant='solid' colorScheme='pink'>
                       Launches
                     </Button>
-                    
+                    </a>
                   </ButtonGroup>
                 </CardFooter>
               </Card>

@@ -54,7 +54,7 @@ export default function Launches() {
                         <Box direction="row" display="flex" justifyContent="center" alignItems="">
                             <Stat>
                                 <StatLabel>Altitude</StatLabel>
-                                <StatNumber>0m</StatNumber>
+                                <StatNumber>-0.5m</StatNumber>
                             </Stat>
                         </Box>
                         <Link my="5" color="pink" href="https://www.uoarocketry.org/projects/solid-rockets">Watch Video</Link>

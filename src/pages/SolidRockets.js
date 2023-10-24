@@ -35,7 +35,7 @@ export default function SolidRockets() {
                   <Box display="flex">
                   <Stat>
                     <StatLabel>Highest Launch</StatLabel>
-                    <StatNumber>0m</StatNumber>
+                    <StatNumber>-0.5m</StatNumber>
                     <StatHelpText>14 Oct 2023</StatHelpText>
                   </Stat>
 
@@ -77,7 +77,7 @@ export default function SolidRockets() {
                         <Tr>
                           <Td>14/10/2023 15:26:24</Td>
                           <Td>Colander</Td>
-                          <Td isNumeric>0</Td>
+                          <Td isNumeric>-0.5</Td>
                           <Td isNumeric>0</Td>
                         </Tr>
                       </Tbody>

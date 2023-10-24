@@ -18,10 +18,10 @@ function HomePage() {
           <Box>
             <Heading as="h1" mx="auto" size="3xl">UOA Rocketry</Heading>
             <Box mx="auto"><Text>Aberdeen, Scotland</Text></Box>
-            <ButtonGroup variant="outline" spacing="6" mt="10">
-              <a href="https://www.uoarocketry.org/contact"><Button colorScheme="pink" variant="solid" size="lg">Get Involved</Button></a>
+            <ButtonGroup variant="outline" spacing="2" mt="10">
+              <a href="https://www.uoarocketry.org/contact"><Button colorScheme="pink" variant="solid" size={{base:"md", md:"lg"}}>Get Involved</Button></a>
               
-              <a  href="https://www.uoarocketry.com/projects"><Button colorScheme="pink" variant="solid" size="lg">Our Projects</Button></a>
+              <a  href="https://www.uoarocketry.com/projects"><Button colorScheme="pink" variant="solid" size={{base:"md", md:"lg"}}>Our Projects</Button></a>
             </ButtonGroup>
 
           </Box>
