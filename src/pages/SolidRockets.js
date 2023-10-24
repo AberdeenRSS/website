@@ -46,7 +46,7 @@ export default function SolidRockets() {
                 </Box>
                 <br />
                   <Text>
-                    Colander is an experimental solid rocket. It is the first rocket of UOA Rocketry and will be used to gather data on the flight using our <Link color="pink" href='https://www.uoarocketry.org/projects/flight-computer'>Flight Computer</Link>.
+                    Colander is an experimental solid rocket. It is the first rocket of UOA Rocketry and will be used to gather data on the flight using our <Link color="pink" href='https://github.com/AberdeenRSS/FlightComputer'>Flight Computer</Link>.
                   </Text>
                   <br />
                   <Text>
