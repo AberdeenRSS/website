@@ -19,7 +19,7 @@ export default function Launches() {
                     <Stack mx="5" textAlign="center">
                         <Stat mx="auto" my="5">
                             <StatLabel>Launch Date</StatLabel>
-                            <StatNumber>Oct 2023</StatNumber>
+                            <StatNumber>Nov 2023</StatNumber>
                         </Stat>
                         <Stat mx="auto" my="5">
                             <StatLabel>Launch Site</StatLabel>
