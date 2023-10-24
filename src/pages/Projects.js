@@ -28,7 +28,7 @@ export default function Projects() {
                   <ButtonGroup spacing='2'>
                     <a href="https://uoarocketry.org/projects/solid-rockets">
                     <Button variant='solid' colorScheme='pink'>
-                      Launches
+                      Read More
                     </Button>
                     </a>
                   </ButtonGroup>
@@ -63,7 +63,7 @@ export default function Projects() {
                 <Divider />
                 <CardFooter>
                   <ButtonGroup spacing='2'>
-                    <Link href="https://app.uoarocketry.org">
+                    <Link href="http://app.uoarocketry.org">
                       <Button variant='solid' colorScheme='pink'>
                         Data
                       </Button>

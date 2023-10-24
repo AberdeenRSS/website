@@ -308,7 +308,7 @@ const NAV_ITEMS = [
       {
         label: 'Data',
         subLabel: 'Data gathered from our launches',
-        href: 'https://app.uoarocketry.org',
+        href: 'http://app.uoarocketry.org',
 
       },
     ],

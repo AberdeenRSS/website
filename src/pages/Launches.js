@@ -54,7 +54,7 @@ export default function Launches() {
                                 <StatNumber>-0.5m</StatNumber>
                             </Stat>
                         </Box>
-                        <Link my="5" color="pink" href="https://www.uoarocketry.org/projects/solid-rockets">Watch Video</Link>
+                        <Link my="5" color="pink" href="https://www.youtube.com/shorts/C2kzfUOwsMI">Watch Video</Link>
                     </Stack>
 
                     
