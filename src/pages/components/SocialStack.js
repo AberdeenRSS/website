@@ -12,7 +12,7 @@ export default function SocialStack() {
         <SocialButton label={'Instagram'} href={'https://www.instagram.com/uoarocketry/'}>
             <FaInstagram />
         </SocialButton>
-        <SocialButton label={'YouTube'} href={'#'}>
+        <SocialButton label={'YouTube'} href={'https://www.youtube.com/@UoARSS'}>
             <FaYoutube />
         </SocialButton>
         <SocialButton label={'Github'} href={'https://github.com/AberdeenRSS'}>
