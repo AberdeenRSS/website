@@ -3,7 +3,7 @@ import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
 import SolidRocket from '../assets/images/SolidRocketDot.png'
 
-import { Box,Card,CardFooter,CardBody,Image,Stack,Heading,Text,ButtonGroup,Button,Divider } from '@chakra-ui/react'
+import { Box,Card,CardFooter,CardBody,Image,Stack,Heading,ButtonGroup,Button,Divider, Link } from '@chakra-ui/react'
 
 export default function Projects() {
   return (
@@ -20,12 +20,7 @@ export default function Projects() {
                   />
                   <Stack mt='6' spacing='3'>
                     <Heading size='md'>Solid Rockets</Heading>
-                    <Text>
-                      
-                    </Text>
-                    <Text color='' fontSize='md'>
-                      
-                    </Text>
+                    
                   </Stack>
                 </CardBody>
                 <Divider />
@@ -45,12 +40,7 @@ export default function Projects() {
                   
                   <Stack mt='6' spacing='3'>
                     <Heading size='md'>Hybrid Motor</Heading>
-                    <Text>
-                      
-                    </Text>
-                    <Text color='' fontSize='md'>
-                      
-                    </Text>
+                    
                   </Stack>
                 </CardBody>
                 <Divider />
@@ -68,24 +58,21 @@ export default function Projects() {
                   
                   <Stack mt='6' spacing='3'>
                     <Heading size='md'>Flight Computer</Heading>
-                    <Text>
-                      
-                    </Text>
-                    <Text color='' fontSize='md'>
-                      
-                    </Text>
                   </Stack>
                 </CardBody>
                 <Divider />
                 <CardFooter>
                   <ButtonGroup spacing='2'>
-                    <Button variant='solid' colorScheme='pink'>
-                      Data
-                    </Button>
-                    <a href="https://github.com/AberdeenRSS/FlightComputer"><Button variant='ghost' colorScheme='pink'>
-                      Documentation
-                    </Button>
-                    </a>
+                    <Link href="https://app.uoarocketry.org">
+                      <Button variant='solid' colorScheme='pink'>
+                        Data
+                      </Button>
+                    </Link>
+                    <Link href="https://github.com/AberdeenRSS/FlightComputer">
+                      <Button variant='ghost' colorScheme='pink'>
+                        Documentation
+                      </Button>
+                    </Link>
                   </ButtonGroup>
                 </CardFooter>
               </Card>

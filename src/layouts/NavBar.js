@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -21,6 +20,7 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons'
 import { Link as ReactRouterLink} from 'react-router-dom'
+import { Link as ChakraLink} from '@chakra-ui/react';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
@@ -49,14 +49,14 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <a href="https://www.uoarocketry.org/">
+          <ChakraLink as={ReactRouterLink} to="/">
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}>
             UOA Rocketry
           </Text>
-          </a>
+          </ChakraLink>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
@@ -91,9 +91,9 @@ const DesktopNav = () => {
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <Box
-                as="a"
+                as={ReactRouterLink}
                 p={2}
-                href={navItem.href ?? '#'}
+                to={navItem.to}
                 fontSize={'sm'}
                 fontWeight={500}
                 color={linkColor}

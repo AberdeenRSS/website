@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
 
-import { Box,Card,Container,CardFooter,CardBody,Image,Stack,Heading,Text,ButtonGroup,Button,Divider, Stat, StatLabel, StatNumber, StatGroup, Link } from '@chakra-ui/react'
+import { Box,Card,Container,Stack,Heading,Divider, Stat, StatLabel, StatNumber, Link } from '@chakra-ui/react'
 
 export default function Launches() {
   return (
@@ -38,10 +38,7 @@ export default function Launches() {
                 <Divider/>
                 <Heading size="md" my="10" textAlign="center" >Previous Launches</Heading>
 
-                <Card
-                    
-                    variant='outline'
-                    >
+                <Card variant='outline'>
                     <Stack mx="5" textAlign="center">
                         <Stat mx="auto" my="5">
                             <StatLabel>Launch Date</StatLabel>
