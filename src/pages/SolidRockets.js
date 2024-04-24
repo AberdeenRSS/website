@@ -35,8 +35,8 @@ export default function SolidRockets() {
                   <Box display="flex">
                   <Stat>
                     <StatLabel>Highest Launch</StatLabel>
-                    <StatNumber>-0.5m</StatNumber>
-                    <StatHelpText>14 Oct 2023</StatHelpText>
+                    <StatNumber>~230m</StatNumber>
+                    <StatHelpText>4 Nov 2023</StatHelpText>
                   </Stat>
 
                   <Stat>

@@ -6,8 +6,8 @@ import { useColorMode, Text,Box,Stack } from '@chakra-ui/react';
 import { FaLocationArrow } from 'react-icons/fa';
 
 import {Link as ReactRouterLink} from 'react-router-dom'
-import { Link as ChakraLink,LinkProps} from '@chakra-ui/react';
-
+import { Link as ChakraLink,LinkProps,Image} from '@chakra-ui/react';
+import Background from '../assets/images/Background2.png'
 
 function HomePage() {
 
@@ -16,10 +16,11 @@ function HomePage() {
   return (
     <>
       <NavBar />
+      <Box  backgroundImage={Background} backgroundSize="cover" backgroundPosition="center">
       <Container textAlign="center">
         <Stack h="100vh" pb="20" display="flex" justify="space-around">
           <Box>
-            <Heading as="h1" mx="auto" size="3xl">UOA Rocketry</Heading>
+            <Heading as="h1" mx="auto" size="3xl">UOA Rocketry  and Space Sciences</Heading>
             <Box mx="auto"><Text>Aberdeen, Scotland</Text></Box>
             <ButtonGroup variant="outline" spacing="2" mt="10">
               <ChakraLink as={ReactRouterLink} to="/contact"><Button colorScheme="pink" variant="solid" size={{base:"md", md:"lg"}}>Get Involved</Button></ChakraLink>
@@ -30,6 +31,7 @@ function HomePage() {
           </Box>
         </Stack>
       </Container>
+      </Box>
       <Footer />
     </>
   );
