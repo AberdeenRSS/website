@@ -2,7 +2,7 @@
 import React from 'react'
 import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
-import { Container, Heading, Text, Link, Card,Avatar, Box } from '@chakra-ui/react'
+import { Container, Heading, Text, Link, Card, Box } from '@chakra-ui/react'
 
 export default function Team() {
   return (

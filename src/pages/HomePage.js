@@ -2,16 +2,13 @@ import { Button, ButtonGroup, Container, Heading } from '@chakra-ui/react';
 import React from 'react';
 import NavBar from '../layouts/NavBar';
 import Footer from '../layouts/Footer';
-import { useColorMode, Text,Box,Stack } from '@chakra-ui/react';
-
+import { Text,Box,Stack } from '@chakra-ui/react';
 
 import {Link as ReactRouterLink} from 'react-router-dom'
 import { Link as ChakraLink } from '@chakra-ui/react';
 import Background from '../assets/images/Background2.png'
 
 function HomePage() {
-
-  const {colorMode, toggleColorMode} = useColorMode();
 
   return (
     <>
