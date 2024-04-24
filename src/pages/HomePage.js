@@ -3,10 +3,10 @@ import React from 'react';
 import NavBar from '../layouts/NavBar';
 import Footer from '../layouts/Footer';
 import { useColorMode, Text,Box,Stack } from '@chakra-ui/react';
-import { FaLocationArrow } from 'react-icons/fa';
+
 
 import {Link as ReactRouterLink} from 'react-router-dom'
-import { Link as ChakraLink,LinkProps,Image} from '@chakra-ui/react';
+import { Link as ChakraLink } from '@chakra-ui/react';
 import Background from '../assets/images/Background2.png'
 
 function HomePage() {

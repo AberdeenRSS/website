@@ -3,7 +3,7 @@ import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
 import Colander from '../assets/images/SolidRocketDot.png'
 
-import { Box,Card,CardHeader,CardBody,Stack,Heading,Text,StackDivider,TableContainer,Table,TableCaption,Thead,Tbody,Tfoot,Tr,Th,Td,Stat,StatLabel,StatNumber,StatHelpText, Img, Link } from '@chakra-ui/react'
+import { Box,Card,CardHeader,CardBody,Stack,Heading,Text,StackDivider,TableContainer,Table,TableCaption,Thead,Tbody,Tr,Th,Td,Stat,StatLabel,StatNumber,StatHelpText, Img, Link } from '@chakra-ui/react'
 
 export default function SolidRockets() {
   return (
