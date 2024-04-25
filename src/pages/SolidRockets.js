@@ -3,7 +3,7 @@ import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
 import Colander from '../assets/images/SolidRocketDot.png'
 
-import { Box,Card,CardHeader,CardBody,Stack,Heading,Text,StackDivider,TableContainer,Table,TableCaption,Thead,Tbody,Tfoot,Tr,Th,Td,Stat,StatLabel,StatNumber,StatHelpText, Img, Link } from '@chakra-ui/react'
+import { Box,Card,CardHeader,CardBody,Stack,Heading,Text,StackDivider,TableContainer,Table,TableCaption,Thead,Tbody,Tr,Th,Td,Stat,StatLabel,StatNumber,StatHelpText, Img, Link } from '@chakra-ui/react'
 
 export default function SolidRockets() {
   return (
@@ -35,8 +35,8 @@ export default function SolidRockets() {
                   <Box display="flex">
                   <Stat>
                     <StatLabel>Highest Launch</StatLabel>
-                    <StatNumber>-0.5m</StatNumber>
-                    <StatHelpText>14 Oct 2023</StatHelpText>
+                    <StatNumber>~230m</StatNumber>
+                    <StatHelpText>4 Nov 2023</StatHelpText>
                   </Stat>
 
                   <Stat>

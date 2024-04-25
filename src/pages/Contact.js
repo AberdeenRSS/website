@@ -1,11 +1,7 @@
 import React from 'react'
 import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
-import { Card,Textarea, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, Box, CardHeader, Heading, Button, Link } from '@chakra-ui/react'
-
-import { FaFacebookF, FaInstagram, FaYoutube, FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-import { Stack } from '@chakra-ui/react'
-import { SocialButton } from './components/SocialButton'
+import { Card,Textarea, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, Box, CardHeader, Heading, Button } from '@chakra-ui/react'
 import SocialStack from './components/SocialStack'
 
 

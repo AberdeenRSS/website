@@ -2,7 +2,7 @@
 import React from 'react'
 import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
-import { Container, Heading, Text, Link, Card,Avatar, Box } from '@chakra-ui/react'
+import { Container, Heading, Text, Link, Card, Box } from '@chakra-ui/react'
 
 export default function Team() {
   return (
@@ -46,19 +46,9 @@ export default function Team() {
             <Heading size="md" my="5" textAlign="center">Social Secretary</Heading>
             <Box display="flex" justifyContent="center">
               <Text>Trinh</Text>
-            </Box>
-
-
-
-
-            
+            </Box>    
           </Card>
-
-
-
-          </Container>
-
-
+        </Container>
       <Footer />
     </>
   )

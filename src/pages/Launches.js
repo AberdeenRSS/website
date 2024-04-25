@@ -12,23 +12,7 @@ export default function Launches() {
 
                 <Heading size="md" my="10" textAlign="center">Upcoming Launches</Heading>
 
-                <Card
-                    
-                    variant='outline'
-                    >
-                    <Stack mx="5" textAlign="center">
-                        <Stat mx="auto" my="5">
-                            <StatLabel>Launch Date</StatLabel>
-                            <StatNumber>Nov 2023</StatNumber>
-                        </Stat>
-                        <Stat mx="auto" my="5">
-                            <StatLabel>Launch Site</StatLabel>
-                            <StatNumber>Alford, Scotland</StatNumber>
-                        </Stat>
-                    </Stack>
-
-                    
-                    </Card>
+                
 
 
 
@@ -38,7 +22,33 @@ export default function Launches() {
                 <Divider/>
                 <Heading size="md" my="10" textAlign="center" >Previous Launches</Heading>
 
-                <Card variant='outline'>
+
+                <Card
+                    
+                    variant='outline' my="4"
+                    >
+                    <Stack mx="5" textAlign="center">
+                        <Stat mx="auto" my="5">
+                            <StatLabel>Launch Date</StatLabel>
+                            <StatNumber>4th Nov 2023</StatNumber>
+                        </Stat>
+                        <Stat mx="auto" my="5">
+                            <StatLabel>Launch Site</StatLabel>
+                            <StatNumber>Alford, Scotland</StatNumber>
+                        </Stat>
+                        <Box direction="row" display="flex" justifyContent="center">
+                            <Stat>
+                                <StatLabel>Altitude</StatLabel>
+                                <StatNumber>~230m</StatNumber>
+                            </Stat>
+                        </Box>
+                        <Link my="5" color="pink" href="https://www.youtube.com/shorts/AL8yvmGwcLw">Watch Video</Link>
+                    </Stack>
+
+                    
+                    </Card>
+
+                <Card variant='outline' my="4">
                     <Stack mx="5" textAlign="center">
                         <Stat mx="auto" my="5">
                             <StatLabel>Launch Date</StatLabel>
