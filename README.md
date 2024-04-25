@@ -1,4 +1,7 @@
-### Deploying
+### Making Changes
+If you want to make changes to the website, make a new branch to make your changes on. 
+
+Deploying:
 
 1. Make a Pull Request to merge your branch with master.
 
