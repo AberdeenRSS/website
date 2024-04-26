@@ -1,5 +1,6 @@
+import React from 'react'
 import { chakra, useColorModeValue, VisuallyHidden } from '@chakra-ui/react'
-
+/* eslint-disable react/prop-types */
 export const SocialButton = ({
     children,
     label,

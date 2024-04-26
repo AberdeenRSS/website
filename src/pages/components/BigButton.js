@@ -1,6 +1,6 @@
 import { Button, Link } from '@chakra-ui/react'
 import React from 'react'
-
+/* eslint-disable react/prop-types */
 export default function BigButton({text,url}) {
   return (
     <Link href={url}>

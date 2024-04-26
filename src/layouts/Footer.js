@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   Box,
   Image,
@@ -13,7 +14,7 @@ import { Link as ChakraLink } from '@chakra-ui/react';
 import SocialStack from '../pages/components/SocialStack';
 import Logo from '../assets/images/RSSLogo.png'
 
-
+/* eslint-disable react/prop-types */
 const ListHeader = ({ children }) => {
   return (
     <Text fontWeight={'500'} fontSize={'lg'} mb={2}>

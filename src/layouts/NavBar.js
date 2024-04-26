@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   Box,
   Flex,
@@ -123,7 +124,7 @@ const DesktopNav = () => {
     </Stack>
   )
 }
-
+/* eslint-disable react/prop-types */
 const DesktopSubNav = ({ label, href, subLabel, to }) => {
   return (
     <>
@@ -186,7 +187,7 @@ const MobileNav = () => {
     </Stack>
   )
 }
-
+/* eslint-disable react/prop-types */
 const MobileNavItem = ({ label, children, href,to }) => {
   const { isOpen, onToggle } = useDisclosure()
 

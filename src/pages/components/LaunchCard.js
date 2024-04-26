@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box,Card,Stack,Stat,StatLabel,StatNumber,Link } from '@chakra-ui/react'
 
+/* eslint-disable react/prop-types */
 export default function LaunchCard({launchDate,launchSite,altitude,link}) {
   return (
     <Card variant='outline' my="4">
