@@ -9,13 +9,18 @@
 
     You can copy paste this above the existing entries and edit the details.
 
-    ```{   
+    ```
+    
+    {   
         upcoming:false,
         launchDate: '14 Oct 2023',
         launchSite: 'Alford, Scotland',
         altitude: '-0.5m',
         link: 'https://www.youtube.com/shorts/C2kzfUOwsMI'
-    },```
+    },
+    
+    ```
+
     where:
     - upcoming: true/false
     - launchDate: 'DD MMM YYYY'
