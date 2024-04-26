@@ -3,9 +3,9 @@
 1. Upcoming/Past Launches page
     Add/Update launches by going to editing file in src/data/launches.js and adding a new object to the **top** of the array.
 
-    > [!TIP]
-    >You can do this directly in Github in your browser! Just click on the file and edit it!
-    >When you save it will ask you to make a new branch, do that and then make a pull request.
+> [!TIP]
+> You can do this directly in Github in your browser! Just click on the file and edit it!
+> When you save it will ask you to make a new branch, do that and then make a pull request.
 
     You can copy paste this above the existing entries and edit the details.
 
