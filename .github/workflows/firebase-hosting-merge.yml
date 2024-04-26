@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npx eslint src && npm ci --silent && npm run build 2>/dev/null
+      - run: npm ci --silent && npx eslint src && npm run build 2>/dev/null
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
