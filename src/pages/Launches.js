@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
 
-import { Box,Card,Container,Stack,Heading,Divider, Stat, StatLabel, StatNumber, Link } from '@chakra-ui/react'
+import { Box,Container,Heading,Divider } from '@chakra-ui/react'
 import LaunchCard from './components/LaunchCard'
 import { launches } from '../data/launches'
 import SocialStack from './components/SocialStack'
