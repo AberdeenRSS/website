@@ -3,74 +3,33 @@ import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
 
 import { Box,Card,Container,Stack,Heading,Divider, Stat, StatLabel, StatNumber, Link } from '@chakra-ui/react'
+import LaunchCard from './components/LaunchCard'
+import { launches } from '../data/launches'
+import SocialStack from './components/SocialStack'
 
 export default function Launches() {
+
+    const upcomingLaunches = launches.filter(launch => launch.upcoming)
+    const previousLaunches = launches.filter(launch => !launch.upcoming)
+
+    console.log(upcomingLaunches)
   return (
     <>
         <NavBar />
-            <Container h="100vh">
-
+            <Container>
                 <Heading size="md" my="10" textAlign="center">Upcoming Launches</Heading>
-
-                
-
-
-
-
-
-
+                {upcomingLaunches.map((launch, index) => {
+                    console.log(launch)
+                    return <LaunchCard key={index} launchDate={launch.launchDate} launchSite={launch.launchSite} altitude={launch.altitude} link={launch.link} />
+                })}
+                {(!upcomingLaunches.length) && <><Box my="5" textAlign="center">No launches planned soon, follow our social media to stay updated!</Box><div className="center-container"><SocialStack /></div></>}
                 <Divider/>
                 <Heading size="md" my="10" textAlign="center" >Previous Launches</Heading>
-
-
-                <Card
-                    
-                    variant='outline' my="4"
-                    >
-                    <Stack mx="5" textAlign="center">
-                        <Stat mx="auto" my="5">
-                            <StatLabel>Launch Date</StatLabel>
-                            <StatNumber>4th Nov 2023</StatNumber>
-                        </Stat>
-                        <Stat mx="auto" my="5">
-                            <StatLabel>Launch Site</StatLabel>
-                            <StatNumber>Alford, Scotland</StatNumber>
-                        </Stat>
-                        <Box direction="row" display="flex" justifyContent="center">
-                            <Stat>
-                                <StatLabel>Altitude</StatLabel>
-                                <StatNumber>~230m</StatNumber>
-                            </Stat>
-                        </Box>
-                        <Link my="5" color="pink" href="https://www.youtube.com/shorts/AL8yvmGwcLw">Watch Video</Link>
-                    </Stack>
-
-                    
-                    </Card>
-
-                <Card variant='outline' my="4">
-                    <Stack mx="5" textAlign="center">
-                        <Stat mx="auto" my="5">
-                            <StatLabel>Launch Date</StatLabel>
-                            <StatNumber>14 Oct 2023</StatNumber>
-                        </Stat>
-                        <Stat mx="auto" my="5">
-                            <StatLabel>Launch Site</StatLabel>
-                            <StatNumber>Alford, Scotland</StatNumber>
-                        </Stat>
-                        <Box direction="row" display="flex" justifyContent="center" alignItems="">
-                            <Stat>
-                                <StatLabel>Altitude</StatLabel>
-                                <StatNumber>-0.5m</StatNumber>
-                            </Stat>
-                        </Box>
-                        <Link my="5" color="pink" href="https://www.youtube.com/shorts/C2kzfUOwsMI">Watch Video</Link>
-                    </Stack>
-
-                    
-                    </Card>
+                {previousLaunches.map((launch, index) => {
+                    return <LaunchCard key={index} launchDate={launch.launchDate} launchSite={launch.launchSite} altitude={launch.altitude} link={launch.link} />
+                })}
+                
             </Container>
-
         <Footer />
     </>
   )

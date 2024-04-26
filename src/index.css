@@ -15,3 +15,9 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
