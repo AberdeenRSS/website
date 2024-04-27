@@ -22,7 +22,7 @@ export default function Launches() {
                     console.log(launch)
                     return <LaunchCard key={index} launchDate={launch.launchDate} launchSite={launch.launchSite} altitude={launch.altitude} link={launch.link} />
                 })}
-                {(!upcomingLaunches.length) && <><Box my="5" textAlign="center">No launches planned soon, follow our social media to stay updated!</Box><div className="center-container"><SocialStack /></div></>}
+                {(!upcomingLaunches.length) && <><Box my="5" textAlign="center">No launches planned soon. Follow our social media to stay updated!</Box><div className="center-container"><SocialStack /></div></>}
                 <Divider/>
                 <Heading size="md" my="10" textAlign="center" >Previous Launches</Heading>
                 {previousLaunches.map((launch, index) => {
