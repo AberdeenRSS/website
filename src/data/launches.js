@@ -1,6 +1,13 @@
 const launches = [
     {
         upcoming: false,
+        launchDate: '12th June 2024',
+        launchSite: 'Midlands Rocketry Club (NRC Competition)',
+        altitude: '350m',
+        link:''
+    }, 
+    {
+        upcoming: false,
         launchDate: '4th May 2024',
         launchSite: 'Alford, Scotland',
         altitude: '>400m',
