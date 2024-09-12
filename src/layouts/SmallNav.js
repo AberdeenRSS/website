@@ -1,5 +1,6 @@
 import { Tabs } from '@chakra-ui/react';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Tab } from '@chakra-ui/react';
 import { Box } from '@chakra-ui/react';
@@ -24,3 +25,7 @@ export default function SmallNav({page}) {
     </>
     )
 }
+
+SmallNav.propTypes = {
+    page: PropTypes.oneOf(['home', 'launches', 'contact']).isRequired
+};

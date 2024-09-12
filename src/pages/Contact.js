@@ -31,7 +31,7 @@ export default function Contact() {
     if (form === null) {
       return
     }
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', () => {
       setIsLoading(true)
     })
   }
