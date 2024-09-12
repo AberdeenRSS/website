@@ -14,6 +14,14 @@ export default function Launches() {
     const upcomingLaunches = launches.filter(launch => launch.upcoming)
     const previousLaunches = launches.filter(launch => !launch.upcoming)
 
+    React.useEffect(() => {
+        const scrollToTop = () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        scrollToTop();
+    }, []);
+
     console.log(upcomingLaunches)
   return (
     <>
