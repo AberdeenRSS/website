@@ -16,7 +16,10 @@ export default function Launches() {
 
     React.useEffect(() => {
         const scrollToTop = () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            const stackElement = document.getElementById('launches-stack');
+            if (stackElement) {
+                stackElement.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         };
 
         scrollToTop();
