@@ -36,7 +36,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider theme={theme}>
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-    <Box backgroundImage={Background} backgroundSize="cover" backgroundPosition="center">
+    <Box backgroundImage={Background} backgroundSize="cover" backgroundPosition="center" h='100vh' overflowY='scroll'>
     <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -46,7 +46,7 @@ root.render(
       </Routes>
     </BrowserRouter>
     </Box>
-    <Footer />
+   
   </ChakraProvider>
 );
 

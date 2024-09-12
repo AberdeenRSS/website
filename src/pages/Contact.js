@@ -43,7 +43,7 @@ export default function Contact() {
 
       <Container textAlign="center">
       <SmallNav page='contact'/>
-        <Stack h="100vh" pb="20" pt='20' display="flex" justify="space-around">
+        <Stack display="flex" justify="space-around">
           
         <Card maxW="2xl" my="10" p="5">
           <CardHeader>
@@ -51,7 +51,9 @@ export default function Contact() {
               Contact Us
             </Heading>
           </CardHeader>
+          <div className="center-container">
           <SocialStack />
+          </div>
 
           <form action="https://formspree.io/f/mwpejlnz" method="POST" id='contactform'>
             <FormControl isInvalid={isError} isRequired>

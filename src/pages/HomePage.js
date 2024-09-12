@@ -6,6 +6,7 @@ import {Link as ReactRouterLink} from 'react-router-dom'
 import { Link as ChakraLink } from '@chakra-ui/react';
 import SmallNav from '../layouts/SmallNav';
 import { Card } from '@chakra-ui/react';
+import SocialStack from './components/SocialStack';
 //   //  backgroundImage={Background} backgroundSize="cover" backgroundPosition=""       
 function HomePage() {
 
@@ -15,12 +16,15 @@ function HomePage() {
       
       <Container textAlign="center">
       <SmallNav page='home'/>
-        <Stack h="100vh" pb="20" pt='20' display="flex" justify="space-around">
+        <Stack display="flex" justify="space-around">
         <Card maxW="2xl" my="10" p="5">
             
             <Heading as="h1" mx="auto" size="3xl">UOA Rocketry</Heading>
             <Box mx="auto"><Text>Aberdeen, Scotland</Text></Box>
-            <hr style={{marginTop:'24px',marginBottom:'24px'}}/>
+            <Box mt='5' mb='0' className="center-container">
+          <SocialStack />
+          </Box>
+            <hr style={{marginBottom:'24px'}}/>
             <Text>If you have landed on this page you are probably interested in engineering, programming or space.</Text>
             <br></br>
             <Text>We have 2 weekly meetings to do work ranging from <ReactRouterLink to='https://github.com/AberdeenRSS/Engineering' style={{textDecoration:'underline'}}>CAD</ReactRouterLink>,  3D printing,  <ReactRouterLink to='https://github.com/AberdeenRSS' style={{textDecoration:'underline'}}>programming</ReactRouterLink>, electronics design, soldering etc.</Text>
