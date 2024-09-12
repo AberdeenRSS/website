@@ -15,7 +15,7 @@ import Launches from './pages/Launches';
 
 import { Box } from '@chakra-ui/react';
 import Background from './assets/images/Background2.png';
-import Footer from './layouts/Footer';
+
 
 
 const config = {
