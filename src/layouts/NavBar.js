@@ -23,7 +23,6 @@ import {
 import { Link as ReactRouterLink} from 'react-router-dom'
 import { Link as ChakraLink} from '@chakra-ui/react';
 import Logo from '../assets/images/RSSLogo.png'
-import Logo2 from '../assets/images/uoarocketrytiny.png'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()

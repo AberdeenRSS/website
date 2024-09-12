@@ -9,10 +9,8 @@ import { ChakraProvider } from "@chakra-ui/react"
 import { extendTheme,ColorModeScript } from '@chakra-ui/react';
 import '@fontsource/space-grotesk'
 
-import Projects from './pages/Projects';
 
 import Contact from './pages/Contact';
-import Sponsors from './pages/Sponsors';
 import Launches from './pages/Launches';
 
 import { Box } from '@chakra-ui/react';

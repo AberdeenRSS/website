@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react'
-import NavBar from '../layouts/NavBar'
-import Footer from '../layouts/Footer'
-import { Card,Textarea, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, Box, CardHeader, Heading, Button } from '@chakra-ui/react'
+import { Card,Textarea, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, CardHeader, Heading, Button } from '@chakra-ui/react'
 import SocialStack from './components/SocialStack'
 import SmallNav from '../layouts/SmallNav'
 import { Container, Stack } from '@chakra-ui/react'
-import Background from '../assets/images/Background2.png'
 
 
 

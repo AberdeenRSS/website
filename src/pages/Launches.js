@@ -1,6 +1,4 @@
 import React from 'react'
-import NavBar from '../layouts/NavBar'
-import Footer from '../layouts/Footer'
 
 import { Box,Container,Heading,Divider } from '@chakra-ui/react'
 import LaunchCard from './components/LaunchCard'

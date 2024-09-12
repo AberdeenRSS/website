@@ -1,5 +1,5 @@
 import { Tabs } from '@chakra-ui/react';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Tab } from '@chakra-ui/react';
 import { Box } from '@chakra-ui/react';
