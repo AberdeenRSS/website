@@ -20,7 +20,8 @@ export default function LaunchCard({launchDate,launchSite,altitude,link}) {
                     <StatNumber>{altitude}</StatNumber>
                 </Stat>
             </Box>
-            <Link my="5" color="pink" href={link}>Watch Video</Link>
+            {link ? <Link my="5" color="pink" href={link}>Watch Video</Link> : <Box my="5"></Box>}
+           
         </Stack>
     </Card>
   )

@@ -14,7 +14,10 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Sponsors from './pages/Sponsors';
 import Launches from './pages/Launches';
-import SolidRockets from './pages/SolidRockets';
+
+import { Box } from '@chakra-ui/react';
+import Background from './assets/images/Background2.png';
+import Footer from './layouts/Footer';
 
 
 const config = {
@@ -35,20 +38,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider theme={theme}>
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+    <Box backgroundImage={Background} backgroundSize="cover" backgroundPosition="center">
     <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<HomePage />} />
-
-        
-        <Route path="/projects" element={<Projects />} />
-
-        <Route path="/projects/solid-rockets" element={<SolidRockets />} />
-
         <Route path="/contact" element={<Contact />} />
-        <Route path="/sponsors" element={<Sponsors />} />
+
         <Route path="/launches" element={<Launches/>} />
       </Routes>
     </BrowserRouter>
+    </Box>
+    <Footer />
   </ChakraProvider>
 );
 

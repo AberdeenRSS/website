@@ -1,28 +1,54 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import NavBar from '../layouts/NavBar'
 import Footer from '../layouts/Footer'
 import { Card,Textarea, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, Box, CardHeader, Heading, Button } from '@chakra-ui/react'
 import SocialStack from './components/SocialStack'
+import SmallNav from '../layouts/SmallNav'
+import { Container, Stack } from '@chakra-ui/react'
+import Background from '../assets/images/Background2.png'
+
 
 
 export default function Contact() {
 
   const [email, setEmail] = React.useState('')
   const [isError, setIsError] = React.useState(false)
+  const [isLoading, setIsLoading] = React.useState(false)
 
   const handleInputChange = (event) => {
     setEmail(event.target.value)
     setIsError(false)
   }
 
+  useEffect(() => {
+    if (isError) {
+      setIsLoading(false)
+    }
+  }
+  , [isError])
 
+  const form = document.getElementById('contactform')
+  console.log(form)
+
+  useEffect(() => {
+    if (form === null) {
+      return
+    }
+    form.addEventListener('submit', (event) => {
+      setIsLoading(true)
+    })
+  }
+  , [form])
 
 
   return (
     <>
-      <NavBar />
-      <Box h="100vh" pt="20">
-        <Card maxW="2xl" mx="auto" my="10" p="5">
+
+      <Container textAlign="center">
+      <SmallNav page='contact'/>
+        <Stack h="100vh" pb="20" pt='20' display="flex" justify="space-around">
+          
+        <Card maxW="2xl" my="10" p="5">
           <CardHeader>
             <Heading>
               Contact Us
@@ -30,7 +56,7 @@ export default function Contact() {
           </CardHeader>
           <SocialStack />
 
-          <form action="https://formsubmit.co/rocketry@ausa.org.uk" method="POST">
+          <form action="https://formspree.io/f/mwpejlnz" method="POST" id='contactform'>
             <FormControl isInvalid={isError} isRequired>
               <FormLabel>Email</FormLabel>
               <Input type='email' name="email" value={email} onChange={handleInputChange} />
@@ -55,12 +81,16 @@ export default function Contact() {
               )}
             </FormControl>
             <input type="hidden" name="_next" value="https://www.uoarocketry.org" />
-            <Button type="submit" colorScheme="pink" variant="solid" size="lg" mt="5" w="100%">Send</Button>
+            <Button isLoading={isLoading} id='submit' type="submit" colorScheme="pink" variant="solid" size="lg" mt="5" w="100%">Send</Button>
           </form>
         </Card>
+        </Stack>
+      </Container>
+   
+
         
-        </Box>
-      <Footer />
+        
+    
     </>
   )
 }

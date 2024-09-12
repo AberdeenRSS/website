@@ -6,6 +6,10 @@ import { Box,Container,Heading,Divider } from '@chakra-ui/react'
 import LaunchCard from './components/LaunchCard'
 import { launches } from '../data/launches'
 import SocialStack from './components/SocialStack'
+import SmallNav from '../layouts/SmallNav'
+import { Stack } from '@chakra-ui/react'
+import { Card } from '@chakra-ui/react'
+
 
 export default function Launches() {
 
@@ -15,9 +19,14 @@ export default function Launches() {
     console.log(upcomingLaunches)
   return (
     <>
-        <NavBar />
-            <Container>
-                <Heading size="md" my="10" textAlign="center">Upcoming Launches</Heading>
+ 
+      <Container textAlign="center">
+      <SmallNav page='launches'/>
+        <Stack  h="100vh" pb="20" pt='20' display="flex" justify="space-around" overflowY={'scroll'}>
+          <Card maxW="2xl" my="10" p="5">
+          
+            
+            <Heading size="md" my="10" textAlign="center">Upcoming Launches</Heading>
                 {upcomingLaunches.map((launch, index) => {
                     console.log(launch)
                     return <LaunchCard key={index} launchDate={launch.launchDate} launchSite={launch.launchSite} altitude={launch.altitude} link={launch.link} />
@@ -28,9 +37,12 @@ export default function Launches() {
                 {previousLaunches.map((launch, index) => {
                     return <LaunchCard key={index} launchDate={launch.launchDate} launchSite={launch.launchSite} altitude={launch.altitude} link={launch.link} />
                 })}
-                
-            </Container>
-        <Footer />
+
+          </Card>
+          
+        </Stack>
+      </Container>
+      
     </>
   )
 }

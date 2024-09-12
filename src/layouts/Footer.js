@@ -7,12 +7,14 @@ import {
   Stack,
   Text,
   useColorModeValue,
+  Link,
 } from '@chakra-ui/react'
 
 import { Link as ReactRouterLink } from 'react-router-dom'
 import { Link as ChakraLink } from '@chakra-ui/react';
 import SocialStack from '../pages/components/SocialStack';
 import Logo from '../assets/images/RSSLogo.png'
+import Logo2 from '../assets/images/uoarocketrytiny.png'
 
 /* eslint-disable react/prop-types */
 const ListHeader = ({ children }) => {
@@ -40,16 +42,7 @@ export default function LargeWithNewsletter() {
             
           </Stack>
           <Stack align={'flex-start'}>
-            <ListHeader>Projects</ListHeader>
-            <ChakraLink as={ReactRouterLink} to="/projects/solid-rockets">
-                Solid Rockets
-            </ChakraLink>
-            <ChakraLink as={ReactRouterLink} to="/projects">
-              Hybrid Motor
-            </ChakraLink>
-            <ChakraLink as={ReactRouterLink} to="/projects">
-              Flight Computer
-            </ChakraLink>
+            
           </Stack>
           
           <SocialStack />

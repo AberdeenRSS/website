@@ -23,6 +23,7 @@ import {
 import { Link as ReactRouterLink} from 'react-router-dom'
 import { Link as ChakraLink} from '@chakra-ui/react';
 import Logo from '../assets/images/RSSLogo.png'
+import Logo2 from '../assets/images/uoarocketrytiny.png'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
@@ -53,7 +54,7 @@ export default function WithSubnavigation() {
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <ChakraLink as={ReactRouterLink} to="/">
           <Image src={Logo} alt="UOA Rocketry Logo" w="80px"/>
-          
+         
           </ChakraLink>
 
           <Flex display={{ base: 'none', md: 'flex' }} lineHeight="80px" ml={10}>
@@ -269,31 +270,6 @@ const MobileNavItem = ({ label, children, href,to }) => {
 
 
 const NAV_ITEMS = [
-  {
-    label: 'Projects',
-    href: 'https://www.uoarocketry.org/projects',
-    to: '/projects',
-    children: [
-      {
-        label: 'Solid Rockets',
-        subLabel: 'See our solid rocket projects',
-        href: 'https://www.uoarocketry.org/projects/solid-rockets',
-        to: '/projects/solid-rockets',
-      },
-      {
-        label: 'Hybrid Motor',
-        subLabel: 'Current development of a hybrid motor',
-        href: 'https://www.uoarocketry.org/projects',
-        to: '/projects',
-      },
-      {
-        label:'Flight Computer',
-        subLabel:'Rocket telemetry and control',
-        href:'https://www.uoarocketry.org/projects',
-        to:'/projects',
-      }
-    ],
-  },
   {
     label: 'Launches',
     href: 'https://www.uoarocketry.org/launches',
