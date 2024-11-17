@@ -1,6 +1,13 @@
 const launches = [
     {
         upcoming: false,
+        launchDate: '19th October 2024',
+        launchSite: 'Fairlie Moor',
+        altitude: '~400m',
+        link: 'https://youtu.be/EdGYpG9lK60?si=luZ6l5ggfJk-u3i6&t=943'
+    }
+    {
+        upcoming: false,
         launchDate: '12th June 2024',
         launchSite: 'Midlands Rocketry Club (NRC Competition)',
         altitude: '350m',
