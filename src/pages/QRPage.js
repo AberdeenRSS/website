@@ -7,7 +7,6 @@ import { Link as ChakraLink } from '@chakra-ui/react';
 import SmallNav from '../layouts/SmallNav';
 import { Card } from '@chakra-ui/react';
 import SocialStack from './components/SocialStack';
-import {Image} from '@chakra-ui/react';
 //   //  backgroundImage={Background} backgroundSize="cover" backgroundPosition=""       
 function QRPage() {
 
@@ -37,9 +36,7 @@ function QRPage() {
               <ChakraLink as={ReactRouterLink} to="https://forms.gle/5vcLn69jJD1JZS4i8" mx='auto'><Button colorScheme="pink" variant="solid" size={{base:"md", md:"lg"}}>Register Interest Form</Button></ChakraLink>
             <ChakraLink as={ReactRouterLink} to="https://discord.gg/cjvDKkeBh8" mx='auto'><Button colorScheme="pink" variant="solid" size={{base:'md',md:'lg'}}>Join our Discord!</Button></ChakraLink>
             </ButtonGroup>
-            <hr style={{ marginTop:"24px", marginBottom:"24px"}}/>
-            <Image src="https://private-user-images.githubusercontent.com/114114685/473771265-846143ed-827d-40fe-a824-72865989a652.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTgxMDkzODMsIm5iZiI6MTc1ODEwOTA4MywicGF0aCI6Ii8xMTQxMTQ2ODUvNDczNzcxMjY1LTg0NjE0M2VkLTgyN2QtNDBmZS1hODI0LTcyODY1OTg5YTY1Mi5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwOTE3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDkxN1QxMTM4MDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jNzhmMDcwYmE3YmYwMGNhZTExOThiZjczY2NlMjA5YmE2MzM4NGEyMzRkMzk1NGQyMzBhZDdjNmE5NzVkOTc5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.psAYchXN_EWWg-g9WLWa7GUltlufrh7nHTynbdnsw_U" />
-
+          
           </Card>
         </Stack>
       </Container>
