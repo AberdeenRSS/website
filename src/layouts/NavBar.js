@@ -288,12 +288,7 @@ const NAV_ITEMS = [
       },
     ],
   },
-  
-  { 
-    label:'Contact',
-    href:'https://www.uoarocketry.org/contact',
-    to:'/contact',
-  }
+
 ]
 
 /* {

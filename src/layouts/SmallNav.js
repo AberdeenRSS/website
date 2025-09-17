@@ -17,7 +17,6 @@ export default function SmallNav({page}) {
             <Tabs defaultIndex={defaultIndex} variant='line' colorScheme='pink' style={{display:'flex', flexDirection:'row', justifyContent:'space-around'}}>
                 <Link to='/'><Tab>Home</Tab></Link>
                 <Link to='/launches'><Tab>Launches</Tab></Link>
-                <Link to='/contact'><Tab>Contact</Tab></Link>
             </Tabs>
             
             </Box>

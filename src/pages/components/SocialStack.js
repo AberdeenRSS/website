@@ -6,9 +6,6 @@ import { SocialButton } from './SocialButton'
 export default function SocialStack() {
   return (
     <Stack direction={'row'} spacing={6} mb="7">
-        <SocialButton label={'Facebook'} href={'https://www.facebook.com/RocketryUoA/'}>
-            <FaFacebookF />
-        </SocialButton>
         <SocialButton label={'Instagram'} href={'https://www.instagram.com/uoarocketry/'}>
             <FaInstagram />
         </SocialButton>

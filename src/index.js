@@ -8,9 +8,9 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { ChakraProvider } from "@chakra-ui/react"
 import { extendTheme,ColorModeScript } from '@chakra-ui/react';
 import '@fontsource/space-grotesk'
+import QRPage from './pages/QRPage';
 
 
-import Contact from './pages/Contact';
 import Launches from './pages/Launches';
 
 import { Box } from '@chakra-ui/react';
@@ -40,9 +40,9 @@ root.render(
     <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/contact" element={<Contact />} />
 
         <Route path="/launches" element={<Launches/>} />
+        <Route path="/qr" element={<QRPage/>} />
       </Routes>
     </BrowserRouter>
     </Box>
