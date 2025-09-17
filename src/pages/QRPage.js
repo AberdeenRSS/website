@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Container, Heading } from '@chakra-ui/react';
+import { Button, ButtonGroup, Container, Heading, HStack } from '@chakra-ui/react';
 import React from 'react';
 import { Text,Box,Stack } from '@chakra-ui/react';
 
@@ -32,10 +32,13 @@ function QRPage() {
             <Text>There is lots to do and absolutely no experience required.</Text>
             <br></br>
             <Text>Please let us know if you are interested in joining through the button below or get in touch!</Text>
-            <ButtonGroup variant="outline" spacing="2" mt="10">
-              <ChakraLink as={ReactRouterLink} to="https://forms.gle/5vcLn69jJD1JZS4i8" mx='auto'><Button colorScheme="pink" variant="solid" size={{base:"md", md:"lg"}}>Register Interest Form</Button></ChakraLink>
-            <ChakraLink as={ReactRouterLink} to="https://discord.gg/cjvDKkeBh8" mx='auto'><Button colorScheme="pink" variant="solid" size={{base:'md',md:'lg'}}>Join our Discord!</Button></ChakraLink>
-            </ButtonGroup>
+          <br />
+            <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
+                <ChakraLink as={ReactRouterLink} to="https://forms.gle/5vcLn69jJD1JZS4i8" mx='auto'><Button colorScheme="pink" variant="solid" size={{base:"md", md:"lg"}}>Register Interest Form</Button></ChakraLink>
+                <br />
+              <ChakraLink as={ReactRouterLink} to="https://discord.gg/cjvDKkeBh8" mx='auto'><Button colorScheme="pink" variant="solid" size={{base:'md',md:'lg'}}>Join our Discord!</Button></ChakraLink>
+            </div>
+
           
           </Card>
         </Stack>
