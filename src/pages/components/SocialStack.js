@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebookF, FaInstagram, FaYoutube, FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaInstagram, FaYoutube, FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { Stack } from '@chakra-ui/react'
 import { SocialButton } from './SocialButton'
 
